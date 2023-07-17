@@ -14,7 +14,8 @@
 }
 
 .section{
-  margin-bottom: 150px;
+  max-width: 1440px;
+  margin: 0 auto 150px;
 }
 
 .title{
@@ -67,6 +68,20 @@
   text-align: center;
   background-color: var(--blue);
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  &:hover{
+    box-shadow: 0 0 40px 6px rgba(64, 119, 243, 0.30);
+  }
+}
+
+.common-button_disabled{
+  border: 0.5px solid var(--light-stroke, #25262C);
+  backdrop-filter: blur(7.5px);
+  background-color: transparent;
 }
 
 .feedback{
@@ -95,12 +110,13 @@
     padding: 20px 104px 20px 15px;
     border: 1px solid #25262C;
     background: rgba(14, 16, 20, 0.60);
+    color: var(--light-text, #E4E5EA);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     &::placeholder{
       color: #E4E5EA;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
     }
   }
   .feedback__personal-data{
@@ -259,11 +275,43 @@
   }
 }
 
+.menu {
+  color: var(--light-text, #E4E5EA);
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+
+  .menu__list {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.socials {
+  display: flex;
+
+  .socials__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  .socials__link{
+    transition: all 0.1s ease-in-out;
+    &:hover{
+      .socials__link-image path{
+          fill: var(--blue);
+      }
+    }
+  }
+}
+
 .header {
   position: relative;
   z-index: 2;
   display: flex;
-  margin-bottom: 90px;
+  max-width: 1440px;
+  margin: 0 auto 90px;
 
   .header__logo {
     margin-right: 27px;
@@ -308,27 +356,12 @@
   .header__contacts-phone {
     margin-right: 47px;
   }
-}
 
-.menu {
-  color: var(--light-text, #E4E5EA);
-  font-weight: 500;
-  font-size: 16px;
-  font-style: normal;
-  line-height: normal;
-
-  .menu__list {
-    display: flex;
-    gap: 30px;
-  }
-}
-
-.socials {
-  display: flex;
-
-  .socials__list {
-    display: flex;
-    gap: 30px;
+  .header__link{
+    transition: all 0.1s ease-out;
+    &:hover{
+      color: var(--blue);
+    }
   }
 }
 
@@ -480,6 +513,10 @@
   .acquaintance__video {
     width: 457px;
     height: 258px;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+      filter: brightness(1.5);
+    }
   }
 
   .acquaintance__help-button {
@@ -694,7 +731,7 @@
     height: 83px;
     border-radius: 46px;
     top: -15px;
-    left: 843px;
+    left: 992px;
     z-index: 0;
   }
   .audit__purple-ball{
@@ -703,7 +740,7 @@
     width: 38px;
     height: 38px;
     top: 332px;
-    left: 1123px;
+    left: 1192px;
     z-index: 0;
   }
   .audit__red-light{
@@ -720,11 +757,80 @@
   .audit__glass{
     background: linear-gradient(223deg, rgba(255, 246, 233, 0.10) 0%, rgba(26, 29, 35, 0.05) 26.62%, rgba(26, 29, 35, 0.05) 48.28%, rgba(26, 29, 35, 0.01) 63.70%, rgba(26, 29, 35, 0.01) 85.60%);
     backdrop-filter: blur(7.5px);
-    width: 1440px;
     height: 1155px;
     top: 0;
-    left: 0;
+    left: -146px;
     z-index: 1;
+    //TODO:выключить
+    display: none;
+  }
+}
+
+.calculation{
+  .calculation__content{
+    display: flex;
+    gap: 130px;
+    align-items: start;
+  }
+  .calculation__roster{
+    .calculation__list-title{
+      color: var(--light-text, #E4E5EA);
+      font-family: Inter, Arial, sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 30px;
+    }
+    .calculaction__list{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 50px;
+      margin-bottom: 48px;
+    }
+    .calculation__list-item{
+      position: relative;
+      padding-left: 35px;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+        top: 10px;
+        left: 0;
+      }
+    }
+    .calculation__schedule{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+
+
+.question{
+  .question__answers{
+    display: flex;
+    gap: 20px;
+  }
+  .question__text{
+    margin-bottom: 20px;
+  }
+  .common-button{
+    padding: 9px 10px;
+  }
+  .common-button_big{
+    padding: 26px 30px 29px;
+  }
+  .question__image{
+    width: 24px;
+    height: 24px;
   }
 }
 
