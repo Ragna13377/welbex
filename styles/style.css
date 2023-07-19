@@ -163,20 +163,10 @@
 }
 
 .polyhedron {
-  top: -116px;
-  left: 296px;
   z-index: 1;
   width: 548px;
   height: 551px;
   background-image: url(/images/Polyhedron.svg);
-}
-
-.red-ball {
-  border-radius: 50%;
-  background: radial-gradient(82.3% 82.3% at 27.25% 26.5%, rgba(255, 208, 208, 0.54) 0%, rgba(212, 93, 93, 0.26) 59.67%, rgba(167, 49, 49, 0.25) 78.59%, rgba(130, 25, 25, 0.25) 100%);
-  backdrop-filter: blur(2px);
-  filter: drop-shadow(3px 6px 27px rgba(223, 125, 125, 0.25));
-  z-index: 0;
 }
 
 .yellow-ball {
@@ -196,30 +186,6 @@
   backdrop-filter: blur(2px);
   filter: drop-shadow(3px 6px 27px rgba(177, 118, 217, 0.25)) blur(5px);
   z-index: 0;
-}
-
-.purple-light {
-  top: -360px;
-  left: 445px;
-  width: 259px;
-  height: 259px;
-  border-radius: 259px;
-  opacity: 0.7;
-  background: #833AB4;
-  filter: blur(196px);
-  z-index: 1;
-}
-
-.red-light {
-  top: 40px;
-  left: -251px;
-  width: 311px;
-  height: 311px;
-  border-radius: 311px;
-  opacity: 0.7;
-  background: #961A1A;
-  filter: blur(196px);
-  z-index: 1;
 }
 
 .gradient {
@@ -444,7 +410,7 @@
   height: 28px;
   filter: drop-shadow(3px 6px 27px rgba(223, 125, 125, 0.25)) blur(2.5px);
 }
-.exposition .exposition_yellow-light {
+.exposition .exposition__yellow-light {
   top: 309px;
   left: 442px;
   width: 280px;
@@ -452,6 +418,39 @@
   border-radius: 280px;
   background: #FCB045;
   filter: blur(196px);
+}
+.exposition .exposition__polyhedron {
+  top: -116px;
+  left: 296px;
+}
+.exposition .exposition__red-ball {
+  border-radius: 50%;
+  background: radial-gradient(82.3% 82.3% at 27.25% 26.5%, rgba(255, 208, 208, 0.54) 0%, rgba(212, 93, 93, 0.26) 59.67%, rgba(167, 49, 49, 0.25) 78.59%, rgba(130, 25, 25, 0.25) 100%);
+  backdrop-filter: blur(2px);
+  filter: drop-shadow(3px 6px 27px rgba(223, 125, 125, 0.25));
+  z-index: 0;
+}
+.exposition .exposition__purple-light {
+  top: -360px;
+  left: 445px;
+  width: 259px;
+  height: 259px;
+  border-radius: 259px;
+  opacity: 0.7;
+  background: #833AB4;
+  filter: blur(196px);
+  z-index: 1;
+}
+.exposition .exposition__red-light {
+  top: 40px;
+  left: -251px;
+  width: 311px;
+  height: 311px;
+  border-radius: 311px;
+  opacity: 0.7;
+  background: #961A1A;
+  filter: blur(196px);
+  z-index: 1;
 }
 
 .acquaintance {
@@ -714,13 +713,17 @@
   top: 0;
   left: -146px;
   z-index: 1;
-  display: none;
 }
 
+.calculation {
+  position: relative;
+}
 .calculation .calculation__content {
   display: flex;
   gap: 130px;
   align-items: start;
+  z-index: 2;
+  position: relative;
 }
 .calculation .calculation__roster .calculation__list-title {
   color: var(--light-text, #E4E5EA);
@@ -757,6 +760,59 @@
   flex-direction: column;
   gap: 40px;
   margin-bottom: 40px;
+}
+.calculation .calculation__polyhedron {
+  top: 340px;
+  left: -81px;
+  z-index: 0;
+}
+.calculation .calculation__purple-ball {
+  box-shadow: -4px 4px 7px 0px rgba(161, 138, 180, 0.2) inset;
+  filter: drop-shadow(3px 6px 27px rgba(177, 118, 217, 0.25));
+  top: 322px;
+  left: 332px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  z-index: 0;
+}
+.calculation .calculation__yellow-light {
+  border-radius: 347px;
+  opacity: 0.6;
+  background: #FCB045;
+  filter: blur(196px);
+  width: 347px;
+  height: 347px;
+  top: 725px;
+  left: -50px;
+}
+.calculation .calculation__yellow-ball {
+  background: radial-gradient(105.65% 105.65% at 0% 11.96%, rgba(255, 233, 203, 0.57) 0%, rgba(184, 131, 18, 0.8) 100%);
+  box-shadow: -4px 4px 7px 0px rgba(255, 255, 255, 0.25) inset;
+  filter: drop-shadow(0px 4px 11px rgba(184, 131, 18, 0.25));
+  backdrop-filter: blur(2.5px);
+  width: 46px;
+  height: 46px;
+  top: 802px;
+  left: -23px;
+}
+.calculation .calculation__red-ball {
+  background: radial-gradient(82.3% 82.3% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.25) 59.67%, rgba(167, 49, 49, 0.26) 78.59%, rgba(130, 25, 25, 0.23) 100%);
+  filter: drop-shadow(3px 6px 27px rgba(223, 125, 125, 0.25)) blur(2.5px);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  top: 871px;
+  left: 315px;
+}
+.calculation .calculation__dots {
+  top: 419px;
+  left: 0px;
+  z-index: 0;
+  width: 386px;
+  height: 698px;
+  background-image: url(/images/dots.svg);
 }
 
 .question .question__answers {
