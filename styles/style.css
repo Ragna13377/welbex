@@ -18,6 +18,32 @@
   margin: 0 auto 150px;
 }
 
+.menu {
+  color: var(--light-text, #E4E5EA);
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+}
+.menu .menu__list {
+  display: flex;
+  gap: 30px;
+}
+
+.socials {
+  display: flex;
+}
+.socials .socials__list {
+  display: flex;
+  gap: 30px;
+}
+.socials .socials__link {
+  transition: all 0.1s ease-in-out;
+}
+.socials .socials__link:hover .socials__link-image path {
+  fill: var(--blue);
+}
+
 .title {
   color: var(--light-text, #E4E5EA);
   font-size: 48px;
@@ -57,6 +83,12 @@
   font-weight: 700;
 }
 
+.gradient {
+  background: var(--gradient, linear-gradient(90deg, #FCB045 36.99%, #fd1d32 130%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .common-button {
   padding: 21px 34px;
   color: var(--light-text, #E4E5EA);
@@ -79,8 +111,81 @@
 
 .common-button_disabled {
   border: 0.5px solid var(--light-stroke, #25262C);
-  backdrop-filter: blur(7.5px);
   background-color: transparent;
+}
+
+.common-roster .common-roster__list-title {
+  color: var(--light-text, #E4E5EA);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+.common-roster .common-roster__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.common-roster .common-roster__list-item {
+  position: relative;
+  padding-left: 35px;
+}
+.common-roster .common-roster__list-item:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+  top: 10px;
+  left: 0;
+}
+.common-roster .common-roster__list-text {
+  color: var(--light-text, #E4E5EA);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.progress .progress__list {
+  display: flex;
+  gap: 128px;
+}
+.progress .progress__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+}
+.progress .progress__image-bg {
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  background: linear-gradient(132deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.2) 100%);
+  box-shadow: 2px 2px 5px 0 rgba(255, 255, 255, 0.15) inset;
+  backdrop-filter: blur(2.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress .progress__image {
+  width: 35px;
+  height: 35px;
+}
+.progress .progress__title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.progress .progress__description {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.6px;
 }
 
 .feedback {
@@ -130,6 +235,24 @@
 }
 .feedback .feedback__personal-link {
   text-decoration-line: underline;
+}
+
+.question .question__answers {
+  display: flex;
+  gap: 20px;
+}
+.question .question__text {
+  margin-bottom: 20px;
+}
+.question .common-button {
+  padding: 9px 10px;
+}
+.question .common-button_big {
+  padding: 26px 30px 29px;
+}
+.question .question__image {
+  width: 24px;
+  height: 24px;
 }
 
 .overlay {
@@ -186,77 +309,6 @@
   backdrop-filter: blur(2px);
   filter: drop-shadow(3px 6px 27px rgba(177, 118, 217, 0.25)) blur(5px);
   z-index: 0;
-}
-
-.gradient {
-  background: var(--gradient, linear-gradient(90deg, #FCB045 36.99%, #fd1d32 130%));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.progress .progress__list {
-  display: flex;
-  gap: 128px;
-}
-.progress .progress__card {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  gap: 20px;
-}
-.progress .progress__image-bg {
-  width: 70px;
-  height: 70px;
-  border-radius: 15px;
-  background: linear-gradient(132deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.2) 100%);
-  box-shadow: 2px 2px 5px 0 rgba(255, 255, 255, 0.15) inset;
-  backdrop-filter: blur(2.5px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.progress .progress__image {
-  width: 35px;
-  height: 35px;
-}
-.progress .progress__title {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.progress .progress__description {
-  font-family: Montserrat, Arial, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25.6px;
-}
-
-.menu {
-  color: var(--light-text, #E4E5EA);
-  font-weight: 500;
-  font-size: 16px;
-  font-style: normal;
-  line-height: normal;
-}
-.menu .menu__list {
-  display: flex;
-  gap: 30px;
-}
-
-.socials {
-  display: flex;
-}
-.socials .socials__list {
-  display: flex;
-  gap: 30px;
-}
-.socials .socials__link {
-  transition: all 0.1s ease-in-out;
-}
-.socials .socials__link:hover .socials__link-image path {
-  fill: var(--blue);
 }
 
 .header {
@@ -593,59 +645,34 @@
   flex-direction: row;
   gap: 30px;
 }
-.problems .problems__lists-container {
+.problems .problems-roster {
   display: grid;
   grid-template-rows: 0.1fr 1fr;
   grid-template-columns: 1.4fr 2fr;
   grid-template-areas: "text_left text-right" "list_left list_right";
   margin-bottom: 70px;
 }
-.problems .problems__list-title {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin-bottom: 30px;
-}
-.problems .problems__list-title:first-child {
+.problems .problems-roster__list-title:first-child {
   grid-area: text_left;
 }
-.problems .problems__list-title:last-child {
+.problems .problems-roster__list-title:last-child {
   grid-area: text-right;
 }
-.problems .problems__list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-left: 30px;
-  gap: 20px 97px;
+.problems .problems-roster__list {
+  gap: 20px 67px;
   max-height: 324px;
-  justify-content: space-between;
 }
-.problems .problems__list:first-child {
+.problems .problems-roster__list:first-child {
   grid-area: list_left;
 }
-.problems .problems__list:last-child {
+.problems .problems-roster__list:last-child {
   grid-area: list_right;
 }
-.problems .problems__list-item {
-  position: relative;
-  max-width: 263px;
+.problems .problems-roster__list-item {
+  max-width: 300px;
 }
-.problems .problems__list-item:before {
-  content: "";
-  position: absolute;
-  background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
-  height: 1px;
-  width: 20px;
-  top: 13px;
-  left: -30px;
-}
-.problems .problems__list-text {
+.problems .problems-roster__list-text {
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 25.6px;
 }
 .problems .problems__yellow-light {
@@ -725,41 +752,22 @@
   z-index: 2;
   position: relative;
 }
-.calculation .calculation__roster .calculation__list-title {
-  color: var(--light-text, #E4E5EA);
-  font-family: Inter, Arial, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin-bottom: 30px;
-}
-.calculation .calculation__roster .calculaction__list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+.calculation .calculation__roster .calculation__list {
   gap: 10px;
   max-height: 50px;
   margin-bottom: 48px;
 }
-.calculation .calculation__roster .calculation__list-item {
-  position: relative;
-  padding-left: 35px;
-}
-.calculation .calculation__roster .calculation__list-item:before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 1px;
-  background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
-  top: 10px;
-  left: 0;
+.calculation .calculation__roster .calculation__list-text {
+  font-family: Inter, Arial, sans-serif;
+  line-height: normal;
 }
 .calculation .calculation__roster .calculation__schedule {
   display: flex;
   flex-direction: column;
   gap: 40px;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
 }
 .calculation .calculation__polyhedron {
   top: 340px;
@@ -813,24 +821,6 @@
   width: 386px;
   height: 698px;
   background-image: url(/images/dots.svg);
-}
-
-.question .question__answers {
-  display: flex;
-  gap: 20px;
-}
-.question .question__text {
-  margin-bottom: 20px;
-}
-.question .common-button {
-  padding: 9px 10px;
-}
-.question .common-button_big {
-  padding: 26px 30px 29px;
-}
-.question .question__image {
-  width: 24px;
-  height: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
