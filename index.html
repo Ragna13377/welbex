@@ -246,8 +246,8 @@
           <p class="additional__description audit__description">И&nbsp;получите предложение по&nbsp;решению вашей задачи</p>
         </div>
       </div>
-	  <article>
-		  <form action="" method="post" enctype="multipart/form-data" class="feedback">
+	  <article class="feedback">
+		  <form action="" method="post" enctype="multipart/form-data" class="feedback__form">
 			<div class="feedback__input">
 			  <label for="feedback__phone" class="feedback__label">Ваш номер телефона</label>
 			  <input type="tel" name="phone" id="feedback__phone" class="feedback__phone-input" placeholder="+7 (___) ___-__-__">
@@ -354,19 +354,18 @@
               </ul>
             </li>
           </ol>
-		  <!-- TODO: артикл добавил. Добавь класс-->
-		  <article>
-			  <form action="" method="post" enctype="multipart/form-data" class="feedback">
-				<div class="feedback__input">
-				  <label for="calculation__phone" class="feedback__label">Ваш номер телефона</label>
-				  <input type="tel" name="phone" id="calculation__phone" class="feedback__phone-input" placeholder="+7 (___) ___-__-__">
-				</div>
-				<button type="submit" class="common-button feedback__button">Заказать аудит</button>
-				<p class="feedback__personal-data">Нажимая «Заказать аудит», я&nbsp;даю согласие <br>на&nbsp;
-				  <a href="" class="feedback__personal-link">обработку персональных данных</a>
-				</p>
-			  </form>
-		  </article>
+          <article class="feedback">
+            <form action="" method="post" enctype="multipart/form-data" class="feedback__form">
+            <div class="feedback__input">
+              <label for="calculation__phone" class="feedback__label">Ваш номер телефона</label>
+              <input type="tel" name="phone" id="calculation__phone" class="feedback__phone-input" placeholder="+7 (___) ___-__-__">
+            </div>
+            <button type="submit" class="common-button feedback__button">Заказать аудит</button>
+            <p class="feedback__personal-data">Нажимая «Заказать аудит», я&nbsp;даю согласие <br>на&nbsp;
+              <a href="" class="feedback__personal-link">обработку персональных данных</a>
+            </p>
+            </form>
+          </article>
         </div>
       </div>
       <div class="overlay polyhedron calculation__polyhedron"></div>
