@@ -75,6 +75,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    max-width: 320px;
   }
   .additional__description{
     color: var(--light-text, #E4E5EA);
@@ -83,6 +84,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    max-width: 290px;
   }
   .gradient{
     font-weight: 700;
@@ -130,6 +132,7 @@
     font-weight: 500;
     line-height: normal;
     margin-bottom: 30px;
+    max-width: 300px;
   }
   .common-roster__list{
     display: flex;
@@ -275,15 +278,15 @@
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
 
   .line {
     position: absolute;
     top: -46px;
     width: 1px;
-    height: 100vh;
+    height: 100%;
     opacity: 0.10000000149011612;
     background: linear-gradient(270deg, #FCB045 12.94%, #833AB4 46.60%);
   }
@@ -409,6 +412,9 @@
   }
 
   .exposition__gift {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     text-align: end;
   }
 
@@ -416,6 +422,7 @@
     margin-bottom: 40px;
     font-weight: 500;
     font-size: 18px;
+    max-width: 290px;
 
     .gradient {
       font-weight: 700;
@@ -429,7 +436,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
-    max-width: 330px;
+    align-items: flex-end;
+    max-width: 360px;
     margin-bottom: 61px;
     gap: 30px;
   }
@@ -568,6 +576,10 @@
     justify-content: space-between;
   }
 
+  .acquaintance__subtitle{
+    max-width: 460px;
+  }
+
   .acquaintance__video-content {
     display: flex;
     align-items: end;
@@ -658,6 +670,9 @@
 .about{
   position: relative;
   margin-bottom: 156px;
+  .about__subtitle{
+    max-width: 390px;
+  }
   .about__list{
     display: flex;
     justify-content: space-between;
@@ -704,10 +719,16 @@
     flex-direction: row;
     gap: 30px;
   }
+  .problems__subtitle{
+    max-width: 460px;
+  }
+  .problems__description{
+    max-width: 320px;
+  }
   .problems-roster{
     display: grid;
     grid-template-rows: 0.1fr 1fr;
-    grid-template-columns: 1.4fr 2fr;
+    grid-template-columns: 1.5fr 2fr;
     grid-template-areas: "text_left text-right"
     "list_left list_right";
     margin-bottom: 70px;
@@ -799,6 +820,7 @@
     background: linear-gradient(223deg, rgba(255, 246, 233, 0.10) 0%, rgba(26, 29, 35, 0.05) 26.62%, rgba(26, 29, 35, 0.05) 48.28%, rgba(26, 29, 35, 0.01) 63.70%, rgba(26, 29, 35, 0.01) 85.60%);
     backdrop-filter: blur(7.5px);
     height: 1155px;
+    width: calc(100% + 149px * 2);
     top: 0;
     left: -146px;
     z-index: 1;
@@ -807,6 +829,9 @@
 
 .calculation{
   position: relative;
+  .calculation__subtitle{
+    max-width: 360px;
+  }
   .calculation__content{
     display: flex;
     gap: 130px;
@@ -886,6 +911,10 @@
     height: 698px;
     background-image: url(/images/dots.svg);
   }
+}
+
+.services{
+
 }
 
 

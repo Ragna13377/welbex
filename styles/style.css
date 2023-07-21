@@ -70,6 +70,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  max-width: 320px;
 }
 .additional .additional__description {
   color: var(--light-text, #E4E5EA);
@@ -78,6 +79,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  max-width: 290px;
 }
 .additional .gradient {
   font-weight: 700;
@@ -122,6 +124,7 @@
   font-weight: 500;
   line-height: normal;
   margin-bottom: 30px;
+  max-width: 300px;
 }
 .common-roster .common-roster__list {
   display: flex;
@@ -260,15 +263,15 @@
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
 }
 .overlay .line {
   position: absolute;
   top: -46px;
   width: 1px;
-  height: 100vh;
+  height: 100%;
   opacity: 0.1000000015;
   background: linear-gradient(270deg, #FCB045 12.94%, #833AB4 46.6%);
 }
@@ -378,12 +381,16 @@
   font-weight: 900;
 }
 .exposition .exposition__gift {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   text-align: end;
 }
 .exposition .exposition__gift-header {
   margin-bottom: 40px;
   font-weight: 500;
   font-size: 18px;
+  max-width: 290px;
 }
 .exposition .exposition__gift-header .gradient {
   font-weight: 700;
@@ -395,7 +402,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
-  max-width: 330px;
+  align-items: flex-end;
+  max-width: 360px;
   margin-bottom: 61px;
   gap: 30px;
 }
@@ -518,6 +526,9 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.acquaintance .acquaintance__subtitle {
+  max-width: 460px;
+}
 .acquaintance .acquaintance__video-content {
   display: flex;
   align-items: end;
@@ -599,6 +610,9 @@
   position: relative;
   margin-bottom: 156px;
 }
+.about .about__subtitle {
+  max-width: 390px;
+}
 .about .about__list {
   display: flex;
   justify-content: space-between;
@@ -645,10 +659,16 @@
   flex-direction: row;
   gap: 30px;
 }
+.problems .problems__subtitle {
+  max-width: 460px;
+}
+.problems .problems__description {
+  max-width: 320px;
+}
 .problems .problems-roster {
   display: grid;
   grid-template-rows: 0.1fr 1fr;
-  grid-template-columns: 1.4fr 2fr;
+  grid-template-columns: 1.5fr 2fr;
   grid-template-areas: "text_left text-right" "list_left list_right";
   margin-bottom: 70px;
 }
@@ -737,6 +757,7 @@
   background: linear-gradient(223deg, rgba(255, 246, 233, 0.1) 0%, rgba(26, 29, 35, 0.05) 26.62%, rgba(26, 29, 35, 0.05) 48.28%, rgba(26, 29, 35, 0.01) 63.7%, rgba(26, 29, 35, 0.01) 85.6%);
   backdrop-filter: blur(7.5px);
   height: 1155px;
+  width: calc(100% + 298px);
   top: 0;
   left: -146px;
   z-index: 1;
@@ -744,6 +765,9 @@
 
 .calculation {
   position: relative;
+}
+.calculation .calculation__subtitle {
+  max-width: 360px;
 }
 .calculation .calculation__content {
   display: flex;
