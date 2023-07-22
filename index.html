@@ -10,14 +10,8 @@
   <link rel="stylesheet" href="./styles/global.css">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
-<div class="page">
-  <div class="overlay">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
+<body class="page">
+<div class="page__decoration">
   <header class="header">
     <div class="header__logo">
       <a href="" class="header__logo-image">
@@ -82,10 +76,8 @@
   <main class="main">
     <section class="exposition section">
       <div class="exposition__info">
-        <h1 class="title exposition__title">Зарабатывайте больше <span class="gradient">с&nbsp;AmoCRM.</span></h1>
-        <div class="additional">
-          <p class="additional__description exposition__description">Развиваем и&nbsp;контролируем <br>продажи за&nbsp;вас</p>
-        </div>
+        <h1 class="exposition__title">Зарабатывайте больше <span class="gradient">с&nbsp;AmoCRM.</span></h1>
+        <p class="exposition__description">Развиваем и&nbsp;контролируем <br>продажи за&nbsp;вас</p>
       </div>
       <div class="exposition__gift">
         <p class="exposition__gift-header">Вместе с&nbsp;<span class="gradient">бесплатной</span> <span class="gradient">консультацией</span> мы&nbsp;дарим:</p>
@@ -122,19 +114,19 @@
       <div class="overlay exposition__dots"></div>
     </section>
     <section class="acquaintance section">
-      <h2 class="acquaintance__title title">Давайте знакомиться</h2>
-      <div class="acquaintance__promo">
-        <div class="additional">
-          <p class="acquaintance__subtitle additional__subtitle"><span class="gradient">Посмотрите минутное видео </span> от&nbsp;основателя компании</p>
+      <h2 class="section__title">Давайте знакомиться</h2>
+      <div class="section__content ">
+        <div class="section__additional">
+          <p class="section__subtitle"><span class="gradient">Посмотрите минутное видео </span> от&nbsp;основателя компании</p>
         </div>
-        <div class="acquaintance__video-content">
-          <video src="./video/WELBEX.mp4" poster="./images/poster.png" controls muted width="457" height="258" class="acquaintance__video"></video>
-          <div class="acquaintance__video-controls">
-            <button class="acquaintance__help-button">
-              <img src="./images/play_icon.svg" alt="" class="acquaintance__help-image">
-            </button>
-            <p class="acquaintance__help-text">Посмотрите видео <br>и получите подарок</p>
-          </div>
+      </div>
+      <div class="acquaintance__media">
+        <video src="./video/WELBEX.mp4" poster="./images/poster.png" controls muted width="457" height="258" class="acquaintance__video"></video>
+        <div class="acquaintance__video-controls">
+          <button class="acquaintance__help-button">
+            <img src="./images/play_icon.svg" alt="" class="acquaintance__help-image">
+          </button>
+          <p class="acquaintance__help-text">Посмотрите видео <br>и получите подарок</p>
         </div>
       </div>
       <div class="acquaintance__author">
@@ -146,9 +138,11 @@
       </div>
     </section>
     <section class="about section">
-      <h2 class="about__title title">О нас</h2>
-      <div class="additional">
-        <p class="about__subtitle additional__subtitle"><span class="gradient">WelbeX — крупный интегратор </span> <span class="gradient">AmoCRM</span> в&nbsp;Росcии и&nbsp;ещё&nbsp;8&nbsp;странах</p>
+      <h2 class="section__title">О нас</h2>
+      <div class="section__content ">
+        <div class="section__additional">
+          <p class="section__subtitle calculation__subtitle"><span class="gradient">WelbeX — крупный интегратор </span> <span class="gradient">AmoCRM</span> в&nbsp;Росcии и&nbsp;ещё&nbsp;8&nbsp;странах</p>
+        </div>
       </div>
       <ul class="about__list">
         <li class="about__list-item">
@@ -167,42 +161,50 @@
       <div class="overlay about__light"></div>
     </section>
     <section class="problems section">
-      <h2 class="problems__title title">Мы решаем проблемы</h2>
-      <div class="additional problems__additional">
-        <p class="problems__subtitle additional__subtitle"><span class="gradient">99% компаний откладывают внедрение AmoCRM</span> или&nbsp;не&nbsp;доводят<br> систему до&nbsp;результата</p>
-        <p class="problems__description additional__description">Всё это приводит к самой главной проблеме — потере денег.</p>
+      <h2 class="section__title">Мы решаем проблемы</h2>
+      <div class="section__content problems__content">
+        <div class="section__additional">
+          <p class="section__subtitle problems__subtitle"><span class="gradient">99% компаний откладывают внедрение AmoCRM</span> или&nbsp;не&nbsp;доводят<br> систему до&nbsp;результата</p>
+        </div>
+        <div class="schedule">
+          <p class="problems__header schedule__header">Всё это приводит к самой главной проблеме — потере денег.</p>
+        </div>
+        <div class="schedule">
+          <p class="schedule__header">Компания работает без AmoCRM</p>
+          <ul class="schedule__list problems__list">
+            <li class="schedule__list-item problems__list-item">
+              <p class="schedule__list-text">Нет времени на&nbsp;самостоятельное изучение и&nbsp;внедрение CRM системы.</p>
+            </li>
+            <li class="schedule__list-item problems__list-item">
+              <p class="schedule__list-text">Отсутствие понимания для&nbsp;чего надо внедрять CRM систему. Какую пользу это принесёт бизнесу.</p>
+            </li>
+            <li class="schedule__list-item problems__list-item">
+              <p class="schedule__list-text">Страх, что вложенные средства не окупятся.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="schedule">
+          <p class="schedule__header">AmoCRM не даёт результата</p>
+          <ul class="schedule__list problems__list">
+            <li class="schedule__list-item problems__list-item">
+              <p class="schedule__list-text">Работа отдела продаж не&nbsp;является системной. Отдел является чёрным ящиком, работу которого нельзя спрогнозировать.</p>
+            </li>
+            <li class="schedule__list-item problems__list-item">
+              <p class="schedule__list-text">Невозможно определить, какие сделки являются самыми прибыльными для&nbsp;компании, а&nbsp;какие не&nbsp;приносят результата.</p>
+            </li>
+            <li class="schedule__list-item problems__list-item">
+              <p class="schedule__list-text">Информация о&nbsp;клиентах хранится лично у&nbsp;менеджеров, что&nbsp;тормозит проект, если&nbsp;сотрудник не&nbsp;на&nbsp;месте. Также&nbsp;это&nbsp;даёт возможность увести клиентов из&nbsp;компании.</p>
+            </li>
+            <li class="schedule__list-item problems__list-item">
+              <p class="schedule__list-text">Сложно оценить эффективность работы отдельного сотрудника.</p>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="problems-roster common-roster">
-        <p class="problems-roster__list-title common-roster__list-title">Компания работает без AmoCRM</p>
-        <p class="problems-roster__list-title common-roster__list-title">AmoCRM не даёт результата</p>
-        <ul class="problems-roster__list common-roster__list">
-          <li class="problems-roster__list-item common-roster__list-item">
-            <p class="problems-roster__list-text common-roster__list-text">Нет времени на&nbsp;самостоятельное изучение и&nbsp;внедрение CRM системы.</p>
-          </li>
-          <li class="problems-roster__list-item common-roster__list-item">
-            <p class="problems-roster__list-text common-roster__list-text">Отсутствие понимания для&nbsp;чего надо внедрять CRM систему. Какую пользу это принесёт бизнесу.</p>
-          </li>
-          <li class="problems-roster__list-item common-roster__list-item">
-            <p class="problems-roster__list-text common-roster__list-text">Страх, что вложенные средства не окупятся.</p>
-          </li>
-        </ul>
-        <ul class="problems-roster__list common-roster__list">
-          <li class="problems-roster__list-item common-roster__list-item">
-            <p class="problems-roster__list-text common-roster__list-text">Работа отдела продаж не&nbsp;является системной. Отдел является чёрным ящиком, работу которого нельзя спрогнозировать.</p>
-          </li>
-          <li class="problems-roster__list-item common-roster__list-item">
-            <p class="problems-roster__list-text common-roster__list-text">Невозможно определить, какие сделки являются самыми прибыльными для&nbsp;компании, а&nbsp;какие не&nbsp;приносят результата.</p>
-          </li>
-          <li class="problems-roster__list-item common-roster__list-item">
-            <p class="problems-roster__list-text common-roster__list-text">Информация о&nbsp;клиентах хранится лично у&nbsp;менеджеров, что&nbsp;тормозит проект, если&nbsp;сотрудник не&nbsp;на&nbsp;месте. Также&nbsp;это&nbsp;даёт возможность увести клиентов из&nbsp;компании.</p>
-          </li>
-          <li class="problems-roster__list-item common-roster__list-item">
-            <p class="problems-roster__list-text common-roster__list-text">Сложно оценить эффективность работы отдельного сотрудника.</p>
-          </li>
-        </ul>
-      </div>
-      <div class="additional">
-        <p class="problems__subtitle additional__subtitle">После <span class="gradient">бесплатного аудита</span> мы</p>
+      <div class="section__content problems__position-fix">
+        <div class="section__additional">
+          <p class="section__subtitle problems__subtitle">После <span class="gradient">бесплатного аудита</span> мы</p>
+        </div>
       </div>
       <div class="progress">
         <ul class="progress__list">
@@ -211,7 +213,7 @@
               <div class="progress__image-bg">
                 <img src="./images/mini-card/func.svg" alt="" class="progress__image" width="35" height="35">
               </div>
-              <p class="progress__title">Продумаем функционал</p>
+              <h3 class="progress__title">Продумаем функционал</h3>
               <p class="progress__description">Составим ТЗ&nbsp;с&nbsp;продуманным функционалом, что&nbsp;сократит ваш бюджет в&nbsp;будущем.</p>
             </article>
           </li>
@@ -220,7 +222,7 @@
               <div class="progress__image-bg">
                 <img src="./images/mini-card/education.svg" alt="" class="progress__image" width="35" height="35">
               </div>
-              <p class="progress__title">Обучим до результата</p>
+              <h3 class="progress__title">Обучим до результата</h3>
               <p class="progress__description">Составим подробную инструкцию по&nbsp;работе с&nbsp;решениями. Обучим одного из&nbsp;ваших сотрудников.</p>
             </article>
           </li>
@@ -229,7 +231,7 @@
               <div class="progress__image-bg">
                 <img src="./images/mini-card/maximum.svg" alt="" class="progress__image" width="35" height="35">
               </div>
-              <p class="progress__title">Настроим продажи на максимум</p>
+              <h3 class="progress__title">Настроим продажи на максимум</h3>
               <p class="progress__description">Сделаем работу отдела системной и&nbsp;легко прогнозируемой, а&nbsp;сотрудников эффективными.</p>
             </article>
           </li>
@@ -239,54 +241,58 @@
       <div class="overlay yellow-ball"></div>
     </section>
     <section class="audit section">
-      <div class="audit__text">
-        <h2 class="audit__title title">Бесплатный аудит</h2>
-        <div class="additional audit__additional">
-          <p class="additional__subtitle audit__subtitle">Закажите <br><span class="gradient">бесплатный скайп-аудит отдела продаж</span></p>
-          <p class="additional__description audit__description">И&nbsp;получите предложение по&nbsp;решению вашей задачи</p>
+      <h2 class="section__title">Бесплатный аудит</h2>
+      <div class="section__content audit__content">
+        <div class="section__additional">
+          <p class="section__subtitle calculation__subtitle">Закажите <br><span class="gradient">бесплатный скайп-аудит отдела продаж</span></p>
+          <p class="section__description">И&nbsp;получите предложение по&nbsp;решению вашей задачи</p>
         </div>
+        <article class="feedback audit__feedback">
+          <form action="" method="post" enctype="multipart/form-data" class="feedback__form">
+            <div class="feedback__input">
+              <label for="feedback__phone" class="feedback__label">Ваш номер телефона</label>
+              <input type="tel" name="phone" id="feedback__phone" class="feedback__phone-input" placeholder="+7 (___) ___-__-__">
+            </div>
+            <button type="submit" class="common-button feedback__button">Заказать аудит</button>
+            <p class="feedback__personal-data">Нажимая «Заказать аудит», я&nbsp;даю согласие <br>на&nbsp;
+              <a href="" class="feedback__personal-link">обработку персональных данных</a>
+            </p>
+          </form>
+        </article>
       </div>
-	  <article class="feedback">
-		  <form action="" method="post" enctype="multipart/form-data" class="feedback__form">
-			<div class="feedback__input">
-			  <label for="feedback__phone" class="feedback__label">Ваш номер телефона</label>
-			  <input type="tel" name="phone" id="feedback__phone" class="feedback__phone-input" placeholder="+7 (___) ___-__-__">
-			</div>
-			<button type="submit" class="common-button feedback__button">Заказать аудит</button>
-			<p class="feedback__personal-data">Нажимая «Заказать аудит», я&nbsp;даю согласие <br>на&nbsp;
-			  <a href="" class="feedback__personal-link">обработку персональных данных</a>
-			</p>
-		  </form>
-	  </article>
       <div class="overlay audit__glass"></div>
       <div class="overlay audit__red-ball"></div>
       <div class="overlay purple-ball audit__purple-ball"></div>
       <div class="overlay audit__red-light"></div>
     </section>
     <section class="section calculation">
-      <h2 class="title calculation__title">Расчёт стоимости</h2>
-      <div class="calculation__content">
-        <div class="additional">
-          <p class="additional__subtitle calculation__subtitle">Ответьте на&nbsp;4&nbsp;вопроса и&nbsp;получите <span class="gradient">расчёт стоимости <br>внедрения AmoCRM</span></p>
-          <p class="additional__description calculation__description">И сэкономьте 80% своего времени.</p>
+      <h2 class="section__title">Расчёт стоимости</h2>
+      <div class="section__content calculation__content">
+        <div class="section__additional">
+          <p class="section__subtitle calculation__subtitle">Ответьте на&nbsp;4&nbsp;вопроса и&nbsp;получите <span class="gradient">расчёт стоимости <br>внедрения AmoCRM</span></p>
+          <p class="section__description">И сэкономьте 80% своего времени.</p>
         </div>
-        <div class="calculation__roster common-roster">
-          <p class="calculation__list-title common-roster__list-title">При&nbsp;заказе с&nbsp;сайта вы&nbsp;получите 4&nbsp;бонуса от&nbsp;компании:</p>
-          <ul class="calculation__list common-roster__list">
-            <li class="calculation__list-item common-roster__list-item">
-              <p class="calculation__list-text common-roster__list-text">Аудит с лучшим экспертом компании</p>
+        <div class="schedule">
+          <p class="schedule__header">При&nbsp;заказе с&nbsp;сайта вы&nbsp;получите 4&nbsp;бонуса от&nbsp;компании:</p>
+          <ul class="schedule__list schedule__list_size_s">
+            <li class="schedule__list-item">
+              <p class="schedule__list-text">Аудит с лучшим экспертом компании</p>
             </li>
-            <li class="calculation__list-item common-roster__list-item">
-              <p class="calculation__list-text common-roster__list-text">Dashboard с показателями</p>
+            <li class="schedule__list-item">
+              <p class="schedule__list-text">Dashboard с показателями</p>
             </li>
-            <li class="calculation__list-item common-roster__list-item">
-              <p class="calculation__list-text common-roster__list-text">30 виджетов</p>
+            <li class="schedule__list-item">
+              <p class="schedule__list-text">30 виджетов</p>
             </li>
-            <li class="calculation__list-item common-roster__list-item">
-              <p class="calculation__list-text common-roster__list-text">35 дней AmoCRM</p>
+            <li class="schedule__list-item">
+              <p class="schedule__list-text">35 дней AmoCRM</p>
             </li>
           </ul>
-          <ol class="calculation__schedule">
+        </div>
+      </div>
+      <div class="calculation__roster-wrapper">
+        <div class="calculation__roster common-roster">
+          <ol class="calculation__quiz">
             <li class="question">
               <p class="question__text">1. Пользуетесь amoCRM?</p>
               <ul class="question__answers">
@@ -376,12 +382,100 @@
       <div class="overlay calculation__red-ball red-ball"></div>
       <div class="overlay calculation__dots"></div>
     </section>
-    <section class="services">
-      <h2 class="title services">Услуги</h2>
-      <div class="additional services__additional">
-        <p class="additional__subtitle services__subtitle">Наша компания оказывает <span class="gradient">целый спектр услуг для вашего бизнеса</span></p>
-<!--        TODO:здесь не дескрипшн-->
-        <p class="">От&nbsp;аудита отдела продаж до&nbsp;создания автоматизированной системы продаж.</p>
+    <section class="services section">
+      <h2 class="section__title">Услуги</h2>
+      <div class="section__content">
+        <div class="section__additional">
+          <p class="section__subtitle calculation__subtitle">Наша компания оказывает <span class="gradient">целый спектр услуг для вашего бизнеса</span></p>
+        </div>
+        <div class="section__list-wrapper">
+          <p class="section__list-header">От&nbsp;аудита отдела продаж <br>до&nbsp;создания автоматизированной системы продаж.</p>
+        </div>
+      </div>
+      <div class="progress">
+        <ul class="progress__list">
+          <li class="progress__list-item progress__list-item_bg">
+            <article class="progress__card">
+              <div class="progress__image-bg">
+                <img src="./images/mini-card/mdi_license.svg" alt="" class="progress__image" width="35" height="35">
+              </div>
+              <h3 class="progress__title">Продажа лицензии</h3>
+              <p class="progress__description">При покупке или продлении amoCRM через нас, вы получаете  дополнительные месяцы в подарок для каждого пользователя.</p>
+            </article>
+          </li>
+          <li class="progress__list-item progress__list-item_bg">
+            <article class="progress__card">
+              <div class="progress__image-bg">
+                <img src="./images/mini-card/mdi_shield-key.svg" alt="" class="progress__image" width="35" height="35">
+              </div>
+              <h3 class="progress__title">Внедрение AmoCRM под ключ</h3>
+              <p class="progress__description">Правильно настроенная CRM-система даёт гарантированный результат и&nbsp;выход на&nbsp;новый уровень.</p>
+            </article>
+          </li>
+          <li class="progress__list-item progress__list-item_bg">
+            <article class="progress__card">
+              <div class="progress__image-bg">
+                <img src="./images/mini-card/si-glyph_magnifier-2.svg" alt="" class="progress__image" width="35" height="35">
+              </div>
+              <h3 class="progress__title">Аудит и стратегия</h3>
+              <p class="progress__description">Проведём аудит, найдём слабые места и&nbsp;составим стратегию развития вашей CRM-системы и&nbsp;отдела продаж.</p>
+            </article>
+          </li>
+          <li class="progress__list-item progress__list-item_bg">
+            <article class="progress__card">
+              <div class="progress__image-bg">
+                <img src="./images/mini-card/bx_bx-support.svg" alt="" class="progress__image">
+              </div>
+              <h3 class="progress__title">Сопровождение, развитие, техническая помощь</h3>
+              <p class="progress__description">Персональный менеджер всегда на&nbsp;связи по&nbsp;любым вопросам.</p>
+            </article>
+          </li>
+          <li class="progress__list-item progress__list-item_bg">
+            <article class="progress__card">
+              <div class="progress__image-bg">
+                <img src="./images/mini-card/developer_mode.svg" alt="" class="progress__image">
+              </div>
+              <h3 class="progress__title">Индивидуальная разработка, кастомизация, доработка</h3>
+              <p class="progress__description">Создадим под&nbsp;ваши бизнес процессы и&nbsp;задачи нестандартное решение в&nbsp;CRM-системе.</p>
+            </article>
+          </li>
+          <li class="progress__list-item progress__list-item_bg">
+            <article class="progress__card">
+              <div class="progress__image-bg">
+                <img src="./images/mini-card/foundation_widget.svg" alt="" class="progress__image">
+              </div>
+              <h3 class="progress__title">Аренда виджетов</h3>
+              <p class="progress__description">Закажите уже&nbsp;готовое решение под&nbsp;различные задачи.</p>
+            </article>
+          </li>
+          <li class="progress__list-item progress__list-item_bg">
+            <article class="progress__card">
+              <div class="progress__image-bg">
+                <img src="./images/mini-card/ic_outline-model-training.svg" alt="" class="progress__image">
+              </div>
+              <h3 class="progress__title">Обучение и&nbsp;аттестация</h3>
+              <p class="progress__description">Проводим обучение для&nbsp;руководителей и&nbsp;линейного персонала.</p>
+            </article>
+          </li>
+          <li class="progress__list-item progress__list-item_bg">
+            <article class="progress__card">
+              <div class="progress__image-bg">
+                <img src="./images/mini-card/ant-design_dashboard-outlined.svg" alt="" class="progress__image">
+              </div>
+              <h3 class="progress__title">Отчётность / Dashboard</h3>
+              <p class="progress__description">Настроим и&nbsp;покажем как&nbsp;следить за&nbsp;ключевыми показателями.</p>
+            </article>
+          </li>
+          <li class="progress__list-item progress__list-item_bg">
+            <article class="progress__card">
+              <div class="progress__image-bg">
+                <img src="./images/mini-card/carbon_ibm-cloud-pak-integration.svg" alt="" class="progress__image">
+              </div>
+              <h3 class="progress__title">Интеграции сервисов с&nbsp;AmoCRM</h3>
+              <p class="progress__description">Интегрируем вашу CRM-систему с&nbsp;другими системами.</p>
+            </article>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
